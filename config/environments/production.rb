@@ -13,7 +13,15 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { :host => "https://photo-lab-new.herokuapp.com/" }
 
-
+  ActionMailer::Base.smtp_settings = {
+      :user_name => 'app192088158@heroku.com',
+      :password => 'tsozguua8846',
+      :domain => 'heroku.com',
+      :address => 'smtp.sendgrid.net',
+      :port => 587,
+      :authentication => :plain,
+      :enable_starttls_auto => true
+  }
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
