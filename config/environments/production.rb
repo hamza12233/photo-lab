@@ -11,6 +11,7 @@ Rails.application.configure do
   config.eager_load = true
 
 config.assets.initialize_on_precompile = true
+config.log_level = :debug
 
 
   config.action_mailer.delivery_method = :smtp
