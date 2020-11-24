@@ -10,7 +10,7 @@ Rails.application.configure do
   config.eager_load = false
 
 # config.assets.initialize_on_precompile = true
-
+config.webpacker.check_yarn_integrity = false
 
   config.action_mailer.delivery_method = :test
   config.action_mailer.default_url_options = { :host => "http://localhost:3000" }
