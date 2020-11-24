@@ -12,7 +12,7 @@ Rails.application.configure do
 # config.webpacker.check_yarn_integrity = false 
 
   config.action_mailer.delivery_method = :test
-  config.action_mailer.default_url_options = { :host => "http://localhost:3000" }
+  config.action_mailer.default_url_options = { :host => "http://photo-lab-new.herokuapp.com" }
 
   # Show full error reports.
   config.consider_all_requests_local = true
@@ -64,4 +64,16 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  ActionMailer::Base.smtp_settings = {
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :domain => 'heroku.com',
+    :address => 'smtp.sendgrid.net',
+    :port => '587',
+    :authentication => :plain,
+    :enable_starttls_auto => true
+}
+
+
 end
