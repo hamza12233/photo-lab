@@ -10,6 +10,9 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+config.assets.initialize_on_precompile = true
+
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { :host => 'photo-lab-new.herokuapp.com', :protocol => 'https'}
 

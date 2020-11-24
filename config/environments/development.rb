@@ -9,7 +9,6 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-# config.assets.initialize_on_precompile = true
 # config.webpacker.check_yarn_integrity = false 
 
   config.action_mailer.delivery_method = :test
